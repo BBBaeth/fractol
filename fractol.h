@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:26:30 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/12 13:45:25 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/03/13 15:03:49 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@
 # define ITR list->iteration
 # define X list->x_ptr
 # define Y list->y_ptr
-# define ITRMAX list->max
+# define ITRMAX list->imax
 # define ZOOM_X list->zoomx
 # define ZOOM_Y list->zoomy
 # define O_A list->a_orgn
@@ -51,6 +51,10 @@
 # define PALET list->color_mode
 # define DIFFX list->diffx
 # define DIFFY list->diffy
+#define MINX list->minix
+#define MINY list->miny
+#define MAXX list->max
+#define MAXY list->maxy
 
 typedef struct		s_mlx
 {
@@ -71,7 +75,7 @@ typedef struct		s_mlx
 	int				endian;
 	int				keys;
 	long			iteration;
-	long			max;
+	long			imax;
 	int				distance;
 	float			a_orgn;
 	float			b_orgn;
@@ -89,6 +93,10 @@ typedef struct		s_mlx
 	float			diffy;
 	float			c_x;
 	float			c_y;
+	float			minix;
+	float			miny;
+	float			max;
+	float			maxy;
 }					t_mlx;
 
 void				ft_fail(char *str);

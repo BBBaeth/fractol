@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:28:28 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/12 13:28:30 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/03/13 15:02:53 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,15 @@
 
 void	lets_scale(t_mlx *list)
 {
-	float	x1;
-	float	x2;
-	float	y1;
-	float	y2;
-
-	x1 = -2.1;
-	x2 = 0.6;
+	MINX = -2.1;
+	MAXX = 0.6;
 	if (FCT == 2)
 	{
-		x1 = -1.85;
-		x2 = 1.85;
+		MINX = -1.85;
+		MAXX = 1.85;
 	}
-	y1 = -1.2;
-	y2 = 1.2;
-	ZOOM_X = IMG_L / (x2 - x1);
-	ZOOM_Y = IMG_H / (y2 - y1);
+	MINY = -1.2;
+	MAXY = 1.2;
+	ZOOM_X = IMG_L / (MAXX - MINX);
+	ZOOM_Y = IMG_H / (MAXY - MINY);
 }

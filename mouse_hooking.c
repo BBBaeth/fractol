@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:28:37 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/12 14:20:32 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/03/13 15:04:11 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ int		mouse_move(int x, int y, t_mlx *list)
 	{
 		DIFFX = x;
 		DIFFY = y;
-		x -= LA / 2;
-		y -= HA / 2;
-		JUL_X = ((float)x / LA) * 2;
-		JUL_Y = ((float)y / HA) * 2;
+		JUL_X = ((float)x / ZOOM_X + MINX);
+		JUL_Y = ((float)y / ZOOM_Y + MINY);
 		init_repeatable_var(list);
 		image_replacer(list);
 	}
