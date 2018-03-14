@@ -15,23 +15,35 @@ FLAGS = -Wall -Wextra -Werror
 
 FRMW = -framework OpenGL -framework Appkit
 
-LIB = ./libft/libft.a	\
+LIB =	./libft/libft.a			\
 		./minilibx_macos/libmlx.a	\
+
+SRC_PATH = .
+
+OBJ_PATH = compiled_objects
+
+SRC = $(addprefix $(SRCS_PATH)/,$(SRCS))
+
+OBJ = $(addprefix $(OBJ_PATH)/,$(SRCO))
+
+.PHONY: all, clean, fclean, re
 
 all: $(NAME)
 
-$(NAME): $(SRCO) $(LIB)
-	gcc -o $(NAME) $(SRCO) $(LIB) $(FRMW)
+$(NAME): $(LIB) $(OBJ)
+	gcc -o $(NAME) $(OBJ) $(LIB) $(FRMW)
 
-$(SRCO): $(SRCS)
-	gcc -c $(FLAGS) $(SRCS)
+$(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
+	@mkdir $(OBJ_PATH) 2> /dev/null || true
+	gcc -c $(FLAGS) -o $@ -c $<
 
 $(LIB):
 	make -C libft
 	make -C minilibx_macos
 
 clean:
-	rm -rf $(SRCO)
+	rm -rf $(OBJ)
+	@rmdir $(OBJ_PATH) 2> /dev/null || true
 	make -C libft clean
 	make -C minilibx_macos clean
 
