@@ -24,19 +24,16 @@
 # define IMG_DATA list->img_data
 # define LA list->l
 # define HA list->h
-# define LP list->l_pos
-# define HP list->h_pos
 # define FCT list->fractal_mode
 # define BPP list->bit_pix
 # define S_L list->size_line
 # define END list->endian
-# define IMG_L list->img_l
-# define IMG_H list->img_h
 # define KD list->keys
 # define ITR list->iteration
 # define X list->x_ptr
 # define Y list->y_ptr
 # define ITRMAX list->imax
+# define ZOOM list->zoom
 # define ZOOM_X list->zoomx
 # define ZOOM_Y list->zoomy
 # define O_A list->a_orgn
@@ -65,11 +62,7 @@ typedef struct		s_mlx
 	char			*read_this;
 	long			l;
 	long			h;
-	int				l_pos;
-	int				h_pos;
 	int				fractal_mode;
-	unsigned int	img_l;
-	unsigned int	img_h;
 	int				bit_pix;
 	int				size_line;
 	int				endian;
@@ -97,10 +90,12 @@ typedef struct		s_mlx
 	float			miny;
 	float			max;
 	float			maxy;
+	float			zoom;
 }					t_mlx;
 
 void				ft_fail(char *str);
 t_mlx				*mlx_new(void);
+int					window_closed(t_mlx *list);
 void				lets_draw_mand(t_mlx *list);
 void				lets_draw_julia(t_mlx *list);
 void				set_it_black(int pos, int x, int y, t_mlx *list);
@@ -114,5 +109,6 @@ void				fractal_generating(t_mlx *list);
 void				image_replacer(t_mlx *list);
 void				init_repeatable_var(t_mlx *list);
 int					mouse_move(int x, int y, t_mlx *list);
+int					mouse_wheel(int button, int x, int y, t_mlx *list);
 
 #endif

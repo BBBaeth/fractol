@@ -32,7 +32,6 @@ void	ft_iterative(t_mlx *list)
 
 void	lets_draw_mand(t_mlx *list)
 {
-	lets_scale(list);
 	while (X <= LA)
 	{
 		Y += 1;
@@ -44,16 +43,15 @@ void	lets_draw_mand(t_mlx *list)
 		ZR = 0;
 		ZI = 0;
 		ITR = 0;
-		CR = X / ZOOM_X - 2.1;
-		CI = Y / ZOOM_Y - 1.2;
-		ITRMAX = 20;
+		CR = X / ZOOM_X + MINX;
+		CI = Y / ZOOM_Y + MINY;
+		ITRMAX = 50;
 		ft_iterative(list);
 	}
 }
 
 void	lets_draw_julia(t_mlx *list)
 {
-	lets_scale(list);
 	while (X <= LA)
 	{
 		Y += 1;
@@ -62,12 +60,12 @@ void	lets_draw_julia(t_mlx *list)
 			X += 1;
 			Y = 0;
 		}
-		ZR = X / ZOOM_X - 2.1;
-		ZI = Y / ZOOM_Y - 1.2;
+		ZR = X / ZOOM_X + MINX;
+		ZI = Y / ZOOM_Y + MINY;
 		ITR = 0;
 		CR = JUL_X;
 		CI = JUL_Y;
-		ITRMAX = 80;
+		ITRMAX = 50;
 		ft_iterative(list);
 	}
 }

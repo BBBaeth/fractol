@@ -16,13 +16,15 @@ void	lets_scale(t_mlx *list)
 {
 	MINX = -2.1;
 	MAXX = 0.6;
+	MINY = -1.35;
+	MAXY = 1.35;
 	if (FCT == 2)
 	{
-		MINX = -1.85;
-		MAXX = 1.85;
+		MINX = -1.6;
+		MAXX = 1.6;
+		MINY = -1.6;
+		MAXY = 1.6;
 	}
-	MINY = -1.2;
-	MAXY = 1.2;
-	ZOOM_X = IMG_L / (MAXX - MINX);
-	ZOOM_Y = IMG_H / (MAXY - MINY);
+	ZOOM_X = LA / (MAXX - MINX);
+	ZOOM_Y = HA / (MAXY - MINY);
 }

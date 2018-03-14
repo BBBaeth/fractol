@@ -15,7 +15,8 @@
 void	let_mlx_loop(t_mlx *list)
 {
 	mlx_key_hook(WIN_PTR, &key_manager, list);
-	mlx_hook(WIN_PTR, 6, 1L << 6, mouse_move, list);
+	mlx_mouse_hook(WIN_PTR, &mouse_wheel, list);
+	mlx_hook(WIN_PTR, 17, 1L << 17, &window_closed, list);
 	mlx_expose_hook(WIN_PTR, &reload_pic, list);
 	mlx_loop(MLX_PTR);
 }

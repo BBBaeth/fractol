@@ -30,9 +30,7 @@ t_mlx	*ft_init_var2(t_mlx *list)
 	y = 0;
 	X = 0;
 	Y = -1;
-	IMG_L = LA;
-	IMG_H = HA;
-	if (!(IMG_PTR = mlx_new_image(MLX_PTR, IMG_L, IMG_H)))
+	if (!(IMG_PTR = mlx_new_image(MLX_PTR, LA, HA)))
 		ft_fail("Error: Unable to generate image.");
 	if (!(IMG_DATA = mlx_get_data_addr(IMG_PTR, &BPP, &S_L, &END)))
 		ft_fail("Error: Unable to access image data.");
@@ -74,8 +72,8 @@ t_mlx	*ft_init_var(int argc, char **argv)
 		ft_fail("Error: Connection failed.");
 	if (!(WIN_PTR = mlx_new_window(MLX_PTR, LA, HA, argv[1])))
 		ft_fail("Error: Unable to create window.");
-	DIFFX = 0;
 	DIFFY = 0;
+	DIFFX = 0;
 	return (list);
 }
 
@@ -117,8 +115,11 @@ int		main(int argc, char **argv)
 	list = ft_init_var2(list);
 	JUL_X = 0.4;
 	JUL_Y = 0.6;
+	ZOOM = 1;
+	lets_scale(list);
 	fractal_generating(list);
 	mlx_put_image_to_window(MLX_PTR, WIN_PTR, IMG_PTR, 0, 0);
+	mouse_wheel(1, DIFFX, DIFFY, list);
 	let_mlx_loop(list);
 	return (0);
 }

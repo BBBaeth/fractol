@@ -39,9 +39,9 @@ void	get_white(int x, int y, t_mlx *list)
 		}
 		else if (PALET == 2)
 		{
-			IMG_DATA[pos + 0] = (char)(labs)((130 + (ITR * 23) % 164));
-			IMG_DATA[pos + 1] = (char)(labs)((30 + (ITR * 30)) % 225);
-			IMG_DATA[pos + 2] = (char)(labs)((30 + (ITR * 30)) % 225);
+			IMG_DATA[pos + 0] = (char)(labs)((120 + (ITR * 33) % 164));
+			IMG_DATA[pos + 1] = (char)(labs)((100 + (ITR * 30)) % 125);
+			IMG_DATA[pos + 2] = (char)(labs)((180 + (ITR * 20)) % 15);
 		}
 		else if (PALET == 0)
 		{
@@ -54,6 +54,12 @@ void	get_white(int x, int y, t_mlx *list)
 			IMG_DATA[pos + 0] = (char)(labs)(20 + (ITR * 80) % 155);
 			IMG_DATA[pos + 1] = (char)(labs)(20 + (ITR * 80) % 155);
 			IMG_DATA[pos + 2] = (char)(labs)(20 + (ITR * 80) % 155);
+		}
+		else if (PALET == 4)
+		{
+			IMG_DATA[pos + 0] = (char)(labs)(110 + (ITR * 190) % 255);
+			IMG_DATA[pos + 1] = (char)(labs)(110 + (ITR * 90) % 105);
+			IMG_DATA[pos + 2] = (char)(labs)(165 - (ITR * 90) % 70);
 		}
 	}
 }

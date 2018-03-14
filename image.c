@@ -24,7 +24,7 @@ void	image_replacer(t_mlx *list)
 	void	*new_img_ptr;
 
 	mlx_destroy_image(MLX_PTR, IMG_PTR);
-	if (!(new_img_ptr = mlx_new_image(MLX_PTR, IMG_L, IMG_H)))
+	if (!(new_img_ptr = mlx_new_image(MLX_PTR, LA, HA)))
 		ft_fail("Error: Unable to generate image.");
 	IMG_PTR = new_img_ptr;
 	fractal_generating(list);

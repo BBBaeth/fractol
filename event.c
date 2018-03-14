@@ -37,6 +37,8 @@ void	change_frct(int key, t_mlx *list)
 		FCT = 1;
 	if (FCT < 1)
 		FCT = 2;
+	lets_scale(list);
+	mouse_wheel(1, DIFFX, DIFFY, list);
 	init_repeatable_var(list);
 	image_replacer(list);
 }
@@ -47,10 +49,10 @@ void	change_palet(int key, t_mlx *list)
 		PALET += 1;
 	if (key == 123)
 		PALET -= 1;
-	if (PALET > 3)
+	if (PALET > 4)
 		PALET = 0;
 	if (PALET < 0)
-		PALET = 3;
+		PALET = 4;
 	init_repeatable_var(list);
 	image_replacer(list);
 }
