@@ -43,6 +43,23 @@ void	change_frct(int key, t_mlx *list)
 	image_replacer(list);
 }
 
+void	julia_lock(t_mlx *list)
+{
+	if (FCT == 2)
+	{
+		if (LOCK == 1)
+		{
+			ft_putstr_fd("State: Mouse motion enabled for Julia.\n", 2);
+			LOCK = 0;
+		}
+		else if (LOCK == 0)
+		{
+			ft_putstr_fd("State: Mouse motion disabled for Julia.\n", 2);
+			LOCK = 1;
+		}
+	}
+}
+
 void	change_palet(int key, t_mlx *list)
 {
 	if (key == 124)
@@ -65,5 +82,7 @@ int		key_manager(int key, void *list)
 		change_palet(key, list);
 	else if (key == 126 || key == 125)
 		change_frct(key, list);
-	return (0);
+	else if (key == 37)
+		julia_lock(list);
+		return (0);
 }

@@ -67,13 +67,17 @@ void	get_white(int x, int y, t_mlx *list)
 void	get_colored(int x, int y, t_mlx *list)
 {
 	int		pos;
+	int		modulo;
 
+	modulo = 20;
+	if (PALET == 4)
+		modulo = 215;
 	pos = (x * BPP) + (y * S_L);
 	set_it_black(pos, x, y, list);
 	if (x < LA && y < HA && x >= 0 && y >= 0)
 	{
-		IMG_DATA[pos + 0] = (char)(20);
-		IMG_DATA[pos + 1] = (char)(20);
-		IMG_DATA[pos + 2] = (char)(20);
+		IMG_DATA[pos + 0] = (char)(modulo);
+		IMG_DATA[pos + 1] = (char)(modulo);
+		IMG_DATA[pos + 2] = (char)(modulo);
 	}
 }

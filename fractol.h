@@ -48,10 +48,11 @@
 # define PALET list->color_mode
 # define DIFFX list->diffx
 # define DIFFY list->diffy
-#define MINX list->minix
-#define MINY list->miny
-#define MAXX list->max
-#define MAXY list->maxy
+# define MINX list->minix
+# define MINY list->miny
+# define MAXX list->max
+# define MAXY list->maxy
+# define LOCK list->julock
 
 typedef struct		s_mlx
 {
@@ -91,6 +92,7 @@ typedef struct		s_mlx
 	float			max;
 	float			maxy;
 	float			zoom;
+	int				julock;
 }					t_mlx;
 
 void				ft_fail(char *str);

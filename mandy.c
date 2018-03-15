@@ -65,7 +65,7 @@ void	lets_draw_julia(t_mlx *list)
 		ITR = 0;
 		CR = JUL_X;
 		CI = JUL_Y;
-		ITRMAX = 50;
+		ITRMAX = 40;
 		ft_iterative(list);
 	}
 }

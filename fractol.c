@@ -67,13 +67,14 @@ t_mlx	*ft_init_var(int argc, char **argv)
 	}
 	HA = 600 + (200 * SIZE);
 	LA = 600 + (200 * SIZE);
-	PALET = 1;
+	PALET = 4;
 	if (!(MLX_PTR = mlx_init()))
 		ft_fail("Error: Connection failed.");
 	if (!(WIN_PTR = mlx_new_window(MLX_PTR, LA, HA, argv[1])))
 		ft_fail("Error: Unable to create window.");
 	DIFFY = 0;
 	DIFFX = 0;
+	LOCK = 0;
 	return (list);
 }
 
