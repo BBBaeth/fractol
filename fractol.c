@@ -70,11 +70,10 @@ t_mlx	*ft_init_var(int argc, char **argv)
 	PALET = 4;
 	if (!(MLX_PTR = mlx_init()))
 		ft_fail("Error: Connection failed.");
-	if (!(WIN_PTR = mlx_new_window(MLX_PTR, LA, HA, argv[1])))
+	if (!(WIN_PTR = mlx_new_window(MLX_PTR, LA, HA, "FRACTOL")))
 		ft_fail("Error: Unable to create window.");
 	DIFFY = 0;
 	DIFFX = 0;
-	LOCK = 0;
 	return (list);
 }
 
@@ -114,11 +113,10 @@ int		main(int argc, char **argv)
 	ft_checkarg(argc, argv);
 	list = ft_init_var(argc, argv);
 	list = ft_init_var2(list);
-	JUL_X = 0.4;
-	JUL_Y = 0.6;
-	ZOOM = 1;
+	ft_init_var3(list);
 	lets_scale(list);
 	fractal_generating(list);
+	help_window(list);
 	mlx_put_image_to_window(MLX_PTR, WIN_PTR, IMG_PTR, 0, 0);
 	mouse_wheel(1, DIFFX, DIFFY, list);
 	let_mlx_loop(list);

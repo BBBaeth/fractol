@@ -53,6 +53,8 @@
 # define MAXX list->max
 # define MAXY list->maxy
 # define LOCK list->julock
+# define HW list->help_w
+# define HW_PTR list->hw_ptr
 
 typedef struct		s_mlx
 {
@@ -93,6 +95,8 @@ typedef struct		s_mlx
 	float			maxy;
 	float			zoom;
 	int				julock;
+	int				help_w;
+	void			*hw_ptr;
 }					t_mlx;
 
 void				ft_fail(char *str);
@@ -112,5 +116,10 @@ void				image_replacer(t_mlx *list);
 void				init_repeatable_var(t_mlx *list);
 int					mouse_move(int x, int y, t_mlx *list);
 int					mouse_wheel(int button, int x, int y, t_mlx *list);
+void				help_window(t_mlx *list);
+void				ft_init_var3(t_mlx *list);
+int					window_info_display(t_mlx *list);
+void				receive_window_event(t_mlx *list);
+int					destroy_help_window(t_mlx *list);
 
 #endif

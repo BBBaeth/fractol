@@ -45,7 +45,6 @@ void	lets_draw_mand(t_mlx *list)
 		ITR = 0;
 		CR = X / ZOOM_X + MINX;
 		CI = Y / ZOOM_Y + MINY;
-		ITRMAX = 50;
 		ft_iterative(list);
 	}
 }
@@ -65,7 +64,6 @@ void	lets_draw_julia(t_mlx *list)
 		ITR = 0;
 		CR = JUL_X;
 		CI = JUL_Y;
-		ITRMAX = 40;
 		ft_iterative(list);
 	}
 }

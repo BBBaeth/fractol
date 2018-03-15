@@ -2,6 +2,7 @@ NAME = fractol
 
 SRCS = 	fractol.c			\
 		utilitaries.c		\
+		utilitaries2.c		\
 		colors.c			\
 		event.c				\
 		mandy.c				\

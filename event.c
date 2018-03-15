@@ -17,6 +17,11 @@ int		window_closed(t_mlx *list)
 	if (list != NULL)
 	{
 		mlx_destroy_window(MLX_PTR, WIN_PTR);
+		if (HW == 1)
+		{
+			ft_putstr_fd("State: properly closing help window.\n", 2);
+			mlx_destroy_window(MLX_PTR, HW_PTR);
+		}
 		if (IMG_DATA != NULL)
 			free(IMG_DATA);
 		free(list);
@@ -84,5 +89,7 @@ int		key_manager(int key, void *list)
 		change_frct(key, list);
 	else if (key == 37)
 		julia_lock(list);
+	else if (key == 40)
+		receive_window_event(list);
 		return (0);
 }
