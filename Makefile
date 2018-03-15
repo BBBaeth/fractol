@@ -9,6 +9,7 @@ SRCS = 	fractol.c			\
 		map.c				\
 		image.c				\
 		mouse_hooking.c		\
+		helpwind.c			\
 
 SRCO = $(SRCS:.c=.o)
 

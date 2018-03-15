@@ -91,5 +91,7 @@ int		key_manager(int key, void *list)
 		julia_lock(list);
 	else if (key == 40)
 		receive_window_event(list);
-		return (0);
+	else if (key == 34)
+		iter_upper(list);
+	return (0);
 }

@@ -114,9 +114,9 @@ int		main(int argc, char **argv)
 	list = ft_init_var(argc, argv);
 	list = ft_init_var2(list);
 	ft_init_var3(list);
+	help_window(list);
 	lets_scale(list);
 	fractal_generating(list);
-	help_window(list);
 	mlx_put_image_to_window(MLX_PTR, WIN_PTR, IMG_PTR, 0, 0);
 	mouse_wheel(1, DIFFX, DIFFY, list);
 	let_mlx_loop(list);

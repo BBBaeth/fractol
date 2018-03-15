@@ -23,6 +23,29 @@ void	set_it_black(int pos, int x, int y, t_mlx *list)
 	}
 }
 
+void	get_white2(int pos, t_mlx *list)
+{
+	if (PALET == 0)
+	{
+		IMG_DATA[pos + 0] = (char)(labs)(200 + (ITR * 10) % 155);
+		IMG_DATA[pos + 1] = (char)(labs)(30 + (ITR * 90) % 255);
+		IMG_DATA[pos + 2] = (char)(labs)(100 + (ITR * 10) & 255);
+	}
+	else if (PALET == 3)
+	{
+		IMG_DATA[pos + 0] = (char)(labs)(20 + (ITR * 80) % 155);
+		IMG_DATA[pos + 1] = (char)(labs)(20 + (ITR * 80) % 155);
+		IMG_DATA[pos + 2] = (char)(labs)(20 + (ITR * 80) % 155);
+	}
+	else if (PALET == 4)
+	{
+		IMG_DATA[pos + 0] = (char)(labs)(110 + (ITR * 190) % 255);
+		IMG_DATA[pos + 1] = (char)(labs)(110 + (ITR * 90) % 105);
+		IMG_DATA[pos + 2] = (char)(labs)(165 - (ITR * 90) % 70);
+	}
+}
+
+
 void	get_white(int x, int y, t_mlx *list)
 {
 	int		pos;
@@ -39,28 +62,12 @@ void	get_white(int x, int y, t_mlx *list)
 		}
 		else if (PALET == 2)
 		{
-			IMG_DATA[pos + 0] = (char)(labs)((120 + (ITR * 33) % 164));
-			IMG_DATA[pos + 1] = (char)(labs)((100 + (ITR * 30)) % 125);
-			IMG_DATA[pos + 2] = (char)(labs)((180 + (ITR * 20)) % 15);
+			IMG_DATA[pos + 0] = (char)(labs)((120 + (ITR * 43) % 174));
+			IMG_DATA[pos + 1] = (char)(labs)((110 + (ITR * 40)) % 165);
+			IMG_DATA[pos + 2] = (char)(labs)((180 + (ITR * 30)) % 90);
 		}
-		else if (PALET == 0)
-		{
-			IMG_DATA[pos + 0] = (char)(labs)(200 + (ITR * 10) % 155);
-			IMG_DATA[pos + 1] = (char)(labs)(10 + (ITR * 90) % 255);
-			IMG_DATA[pos + 2] = (char)(labs)(100 + (ITR * 10) & 255);
-		}
-		else if (PALET == 3)
-		{
-			IMG_DATA[pos + 0] = (char)(labs)(20 + (ITR * 80) % 155);
-			IMG_DATA[pos + 1] = (char)(labs)(20 + (ITR * 80) % 155);
-			IMG_DATA[pos + 2] = (char)(labs)(20 + (ITR * 80) % 155);
-		}
-		else if (PALET == 4)
-		{
-			IMG_DATA[pos + 0] = (char)(labs)(110 + (ITR * 190) % 255);
-			IMG_DATA[pos + 1] = (char)(labs)(110 + (ITR * 90) % 105);
-			IMG_DATA[pos + 2] = (char)(labs)(165 - (ITR * 90) % 70);
-		}
+		else if (PALET == 0 || PALET == 3 || PALET == 4)
+			get_white2(pos, list);
 	}
 }
 
