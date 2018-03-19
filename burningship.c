@@ -4,11 +4,11 @@ void	ft_iterative_ship(t_mlx *list)
 {
 	float	tmp;
 
-	while (ITR < ITRMAX && ZR * ZR + ZI * ZI < 10)
+	while (ITR < ITRMAX && ZR * ZR + ZI * ZI < 100)
 	{
-		tmp = ZR * ZR - ZI * ZI + CR;
+		tmp = fabsf(ZR * ZR - ZI * ZI + CR);
 		ZI = fabsf(2 * ZR * ZI + CI);
-		ZR = fabsf(tmp);
+		ZR = tmp;
 		ITR += 1;
 	}
 	if (ITR == ITRMAX)

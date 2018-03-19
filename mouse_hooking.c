@@ -67,8 +67,8 @@ int		mouse_wheel(int button, int x, int y, t_mlx *list)
 			return (0);
 		}
 		ft_dezoom(x, y, list);
-		if (ITRMAX < 1)
-			ITRMAX = 1;
+		if (ITRMAX < 15)
+			ITRMAX = 15;
 		init_repeatable_var(list);
 		image_replacer(list);
 		return (0);

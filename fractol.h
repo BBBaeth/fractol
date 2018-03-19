@@ -24,6 +24,7 @@
 # define IMG_DATA list->img_data
 # define LA list->l
 # define HA list->h
+# define NAME list->read_this
 # define FCT list->fractal_mode
 # define BPP list->bit_pix
 # define S_L list->size_line

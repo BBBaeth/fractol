@@ -13,9 +13,16 @@ int		window_info_display(t_mlx *list)
 {
 	void	*a;
 
+	if (FCT == 2)
+		NAME = "  Julia";
+	else if (FCT == 1)
+		NAME = "Mandelbrot";
+	else if (FCT == 3)
+		NAME = "Burning ship";
 	a = MLX_PTR;
 	mlx_clear_window(MLX_PTR, HW_PTR);
-	mlx_string_put(a, HW_PTR, 10, 10, 0xFFFFFFF, "K: close/open help window\n");
+	mlx_string_put(a, HW_PTR, 80, -1, 0xFFFFFFF, NAME);
+	mlx_string_put(a, HW_PTR, 10, 12, 0xFFFFFFF, "K: close/open help window\n");
 	mlx_string_put(a, HW_PTR, 10, 35, 0xFFFFFFF, "L: lock/unlock julia\n");
 	mlx_string_put(a, HW_PTR, 10, 60, 0xFFFFFFF, "MOUSE WHEEL: zoom in/out\n");
 	mlx_string_put(a, HW_PTR, 10, 85, 0xFFFFFFF, "UP/DOWN: change fractal\n");
@@ -26,7 +33,6 @@ int		window_info_display(t_mlx *list)
 
 int		destroy_help_window(t_mlx *list)
 {
-	ft_putstr_fd("State: properly closing help window.\n", 2);
 	mlx_destroy_window(MLX_PTR, HW_PTR);
 	HW = 0;
 	return (0);
@@ -40,7 +46,10 @@ void	help_window(t_mlx *list)
 		window_info_display(list);
 	}
 	else if (HW == 0)
+	{
+		ft_putstr_fd("State: properly closing help window.\n", 2);
 		destroy_help_window(list);
+	}
 }
 
 void	receive_window_event(t_mlx *list)

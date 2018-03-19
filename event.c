@@ -42,6 +42,8 @@ void	change_frct(int key, t_mlx *list)
 		FCT = 1;
 	if (FCT < 1)
 		FCT = 3;
+	if (HW == 1)
+		window_info_display(list);
 	lets_scale(list);
 	mouse_wheel(1, DIFFX, DIFFY, list);
 	init_repeatable_var(list);
