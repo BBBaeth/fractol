@@ -62,7 +62,7 @@ void	get_white(int x, int y, t_mlx *list)
 		}
 		else if (PALET == 2)
 		{
-			IMG_DATA[pos + 0] = (char)(labs)((120 + (ITR * 43) % 174));
+			IMG_DATA[pos + 0] = (char)(labs)((120 + y % 9 + (ITR * 43) % 174));
 			IMG_DATA[pos + 1] = (char)(labs)((110 + (ITR * 40)) % 165);
 			IMG_DATA[pos + 2] = (char)(labs)((180 + (ITR * 30)) % 90);
 		}

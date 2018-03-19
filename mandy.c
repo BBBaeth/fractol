@@ -17,7 +17,7 @@ void	ft_iterative(t_mlx *list)
 	float	tmp;
 
 	tmp = ZR;
-	while (ITR < ITRMAX && ZR * ZR + ZI * ZI < 4)
+	while (ITR < ITRMAX && ZR * ZR + ZI * ZI < 9)
 	{
 		tmp = ZR;
 		ZR = ZR * ZR - ZI * ZI + CR;

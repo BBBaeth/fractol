@@ -33,7 +33,6 @@
 # define X list->x_ptr
 # define Y list->y_ptr
 # define ITRMAX list->imax
-# define ZOOM list->zoom
 # define ZOOM_X list->zoomx
 # define ZOOM_Y list->zoomy
 # define O_A list->a_orgn

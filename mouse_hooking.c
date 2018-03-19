@@ -29,36 +29,28 @@ int		mouse_move(int x, int y, t_mlx *list)
 
 void	ft_dezoom(int x, int y, t_mlx *list)
 {
-	float	x1;
-	float	y1;
-
-	x1 = (x / ZOOM_X + MINX);
-	y1 = (y / ZOOM_Y + MINY);
+	MINX = ((x / ZOOM_X + MINX) - ((ZOOM_X * 1.2) / 2))
+		+ ((ZOOM_X * 1.2) / 2 - (x / ZOOM_X / 1.2));
+	MINY = (y / ZOOM_Y + MINY) - ((ZOOM_Y * 1.2) / 2)
+		+ ((ZOOM_Y * 1.2) / 2 - (y / ZOOM_Y / 1.2));
 	ITRMAX -= 2;
-	ZOOM = ZOOM * 1.2;
+	MAXX = (MINX * (LA * ZOOM_X + MINX));
+	MAXY = (MINY * (HA * ZOOM_Y + MINY));
 	ZOOM_X = ZOOM_X / 1.2;
 	ZOOM_Y = ZOOM_Y / 1.2;
-	MINX = x1 - ZOOM;
-	MAXX = x1 + ZOOM;
-	MINY = y1 - ZOOM;
-	MAXY = y1 + ZOOM;
 }
 
 void	ft_zoom(int x, int y, t_mlx *list)
 {
-	float	x1;
-	float	y1;
-
-	x1 = (x / ZOOM_X + MINX);
-	y1 = (y / ZOOM_Y + MINY);
+	MINX = ((x / ZOOM_X + MINX) - ((ZOOM_X * 1.2) / 2))
+		+ ((ZOOM_X * 1.2) / 2 - (x / ZOOM_X / 1.2));
+	MINY = (y / ZOOM_Y + MINY) - ((ZOOM_Y * 1.2) / 2)
+		+ ((ZOOM_Y * 1.2) / 2 - (y / ZOOM_Y / 1.2));
 	ITRMAX += 2;
-	ZOOM = ZOOM / 1.2;
+	MAXX = (MINX * (LA / ZOOM_X - MINX));
+	MAXY = (MINY * (HA / ZOOM_Y - MINY));
 	ZOOM_X = ZOOM_X * 1.2;
 	ZOOM_Y = ZOOM_Y * 1.2;
-	MINX = MINX - ZOOM - (MINX - x1);
-	MAXX = MAXX + ZOOM - (MAXX - x1);
-	MINY = MINY - ZOOM - (MINY - y1);
-	MAXY = MAXY + ZOOM - (MAXY - y1);
 }
 
 int		mouse_wheel(int button, int x, int y, t_mlx *list)
@@ -68,8 +60,8 @@ int		mouse_wheel(int button, int x, int y, t_mlx *list)
 		if (button == 5)
 		{
 			ft_zoom(x, y, list);
-			if (ITRMAX >= 160)
-				ITRMAX = 170;
+			if (ITRMAX >= 190)
+				ITRMAX = 190;
 			init_repeatable_var(list);
 			image_replacer(list);
 			return (0);

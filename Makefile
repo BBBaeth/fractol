@@ -6,6 +6,7 @@ SRCS = 	fractol.c			\
 		colors.c			\
 		event.c				\
 		mandy.c				\
+		burningship.c		\
 		map.c				\
 		image.c				\
 		mouse_hooking.c		\

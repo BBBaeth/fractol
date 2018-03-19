@@ -15,7 +15,6 @@
 void	lets_scale(t_mlx *list)
 {
 	ITRMAX = 35;
-	ZOOM = 0.9;
 	MINX = -2.1;
 	MAXX = 0.6;
 	MINY = -1.35;

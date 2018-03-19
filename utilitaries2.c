@@ -10,8 +10,8 @@ void	ft_init_var3(t_mlx *list)
 
 void	iter_upper(t_mlx *list)
 {
-	if (ITRMAX < 170)
-		ITRMAX += 5;
+	if (ITRMAX < 156)
+		ITRMAX += 4;
 	else
 		ft_putstr_fd("State: iteration is already at its maximum.\n", 2);
 	init_repeatable_var(list);
