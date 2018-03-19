@@ -38,10 +38,10 @@ void	change_frct(int key, t_mlx *list)
 		FCT++;
 	if (key == 125)
 		FCT--;
-	if (FCT > 2)
+	if (FCT > 3)
 		FCT = 1;
 	if (FCT < 1)
-		FCT = 2;
+		FCT = 3;
 	lets_scale(list);
 	mouse_wheel(1, DIFFX, DIFFY, list);
 	init_repeatable_var(list);

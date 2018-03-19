@@ -42,6 +42,8 @@ void	fractal_generating(t_mlx *list)
 			lets_draw_mand(list);
 	else if (FCT == 2)
 		lets_draw_julia(list);
-	else if (FCT > 2 || FCT < 1)
+	else if (FCT == 3)
+		lets_draw_ship(list);
+	else if (FCT > 3 || FCT < 1)
 		ft_fail("Error: Unable to generate this fractal at the moment.");
 }

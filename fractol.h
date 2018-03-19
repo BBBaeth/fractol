@@ -103,6 +103,7 @@ t_mlx					*mlx_new(void);
 int						window_closed(t_mlx *list);
 void					lets_draw_mand(t_mlx *list);
 void					lets_draw_julia(t_mlx *list);
+void					lets_draw_ship(t_mlx *list);
 void					set_it_black(int pos, int x, int y, t_mlx *list);
 void					get_white(int x, int y, t_mlx *list);
 void					get_colored(int x, int y, t_mlx *list);

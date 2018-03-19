@@ -5,6 +5,7 @@ void	generate_window(t_mlx *list)
 	if (!(HW_PTR = mlx_new_window(MLX_PTR, 270, 160, "HELP WINDOW")))
 		ft_fail("Error: Unable to create help window.");
 	mlx_expose_hook(HW_PTR, &window_info_display, list);
+	mlx_key_hook(HW_PTR, &key_manager, list);
 	mlx_hook(HW_PTR, 17, 1L << 17, &destroy_help_window, list);
 }
 

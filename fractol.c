@@ -57,6 +57,8 @@ t_mlx	*ft_init_var(int argc, char **argv)
 		FCT = 1;
 	else if (ft_strcmp(argv[1], "julia") == 0)
 		FCT = 2;
+	else if (ft_strcmp(argv[1], "burningship") == 0)
+		FCT = 3;
 	SIZE = 1;
 	if (argc >= 3)
 	{
@@ -67,13 +69,10 @@ t_mlx	*ft_init_var(int argc, char **argv)
 	}
 	HA = 600 + (200 * SIZE);
 	LA = 600 + (200 * SIZE);
-	PALET = 4;
 	if (!(MLX_PTR = mlx_init()))
 		ft_fail("Error: Connection failed.");
 	if (!(WIN_PTR = mlx_new_window(MLX_PTR, LA, HA, "FRACTOL")))
 		ft_fail("Error: Unable to create window.");
-	DIFFY = 0;
-	DIFFX = 0;
 	return (list);
 }
 
