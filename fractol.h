@@ -122,5 +122,6 @@ int						window_info_display(t_mlx *list);
 void					receive_window_event(t_mlx *list);
 int						destroy_help_window(t_mlx *list);
 void					iter_upper(t_mlx *list);
+void					ft_usage(void);
 
 #endif

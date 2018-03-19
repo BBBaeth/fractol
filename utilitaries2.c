@@ -8,6 +8,18 @@ void	ft_init_var3(t_mlx *list)
 	HW = 1;
 }
 
+void	ft_usage(void)
+{
+	ft_putstr_fd("Usage: fractol [fractal name] [window size]\n", 2);
+	ft_putstr_fd("\nAvailable fractals are: \n", 2);
+	ft_putstr_fd("   * Mandelbrot *\n   *    Julia   *\n", 2);
+	ft_putstr_fd("\nAvailable window sizes are: \n", 2);
+	ft_putstr_fd("   *     big    *\n", 2);
+	ft_putstr_fd("   *    small   *\n   *    medium  *\n", 2);
+	exit(0);
+
+}
+
 void	iter_upper(t_mlx *list)
 {
 	if (ITRMAX < 156)

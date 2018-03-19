@@ -94,16 +94,8 @@ void	ft_checkarg(int argc, char **argv)
 		select++;
 	}
 	if (argc < 2 || argv[1][0] == '\0' || (ft_strcmp(argv[1], "mandelbrot")
-		&& ft_strcmp(argv[1], "julia")))
-	{
-		ft_putstr_fd("Usage: fractol [fractal name] [window size]\n", 2);
-		ft_putstr_fd("\nAvailable fractals are: \n", 2);
-		ft_putstr_fd("   * Mandelbrot *\n   *    Julia   *\n", 2);
-		ft_putstr_fd("\nAvailable window sizes are: \n", 2);
-		ft_putstr_fd("   *     big    *\n", 2);
-		ft_putstr_fd("   *    small   *\n   *    medium  *\n", 2);
-		exit(0);
-	}
+		&& ft_strcmp(argv[1], "julia") && ft_strcmp(argv[1], "burningship")))
+		ft_usage();
 }
 
 int		main(int argc, char **argv)
