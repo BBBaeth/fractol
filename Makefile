@@ -16,7 +16,7 @@ SRCO = $(SRCS:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
-FRMW = -framework OpenGL -framework Appkit
+FRMW = -framework OpenGL -framework Appkit -flto
 
 LIB =	./libft/libft.a			\
 		./minilibx_macos/libmlx.a	\
