@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:26:08 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/12 13:37:02 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/03/20 11:11:15 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	get_white2(int pos, t_mlx *list)
 		IMG_DATA[pos + 2] = (char)(labs)(165 - (ITR * 90) % 70);
 	}
 }
-
 
 void	get_white(int x, int y, t_mlx *list)
 {

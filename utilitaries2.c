@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utilitaries2.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/03/20 11:09:57 by ceugene           #+#    #+#             */
+/*   Updated: 2018/03/20 11:10:12 by ceugene          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 
 void	ft_init_var3(t_mlx *list)
@@ -21,7 +33,6 @@ void	ft_usage(void)
 	ft_putstr_fd("   *      big     *\n", 2);
 	ft_putstr_fd("   *     small    *\n   *     medium   *\n", 2);
 	exit(0);
-
 }
 
 void	iter_upper(t_mlx *list)

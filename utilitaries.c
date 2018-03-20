@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:29:17 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/12 14:19:59 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/03/20 11:10:31 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_mlx	*mlx_new(void)
 void	fractal_generating(t_mlx *list)
 {
 	if (FCT == 1)
-			lets_draw_mand(list);
+		lets_draw_mand(list);
 	else if (FCT == 2)
 		lets_draw_julia(list);
 	else if (FCT == 3)
