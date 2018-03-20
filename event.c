@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:26:13 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/12 14:19:07 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/03/20 11:15:41 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,10 @@ void	change_palet(int key, t_mlx *list)
 		PALET += 1;
 	if (key == 123)
 		PALET -= 1;
-	if (PALET > 4)
+	if (PALET > 5)
 		PALET = 0;
 	if (PALET < 0)
-		PALET = 4;
+		PALET = 5;
 	init_repeatable_var(list);
 	image_replacer(list);
 }

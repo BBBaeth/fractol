@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:26:08 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/20 11:11:15 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/03/20 11:26:43 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ void	get_white2(int pos, t_mlx *list)
 		IMG_DATA[pos + 1] = (char)(labs)(110 + (ITR * 90) % 105);
 		IMG_DATA[pos + 2] = (char)(labs)(165 - (ITR * 90) % 70);
 	}
+	else if (PALET == 5)
+	{
+		IMG_DATA[pos + 0] = (char)(labs)(60 + (ITR * 30) % 10);
+		IMG_DATA[pos + 1] = (char)(labs)(60 + (ITR * 20) % 15);
+		IMG_DATA[pos + 2] = (char)(labs)(65 + (ITR * 20) % 10);
+	}
 }
 
 void	get_white(int x, int y, t_mlx *list)
@@ -65,7 +71,7 @@ void	get_white(int x, int y, t_mlx *list)
 			IMG_DATA[pos + 1] = (char)(labs)((110 + (ITR * 40)) % 165);
 			IMG_DATA[pos + 2] = (char)(labs)((180 + (ITR * 30)) % 90);
 		}
-		else if (PALET == 0 || PALET == 3 || PALET == 4)
+		else if (PALET == 0 || PALET == 3 || PALET == 4 || PALET == 5)
 			get_white2(pos, list);
 	}
 }
@@ -78,6 +84,8 @@ void	get_colored(int x, int y, t_mlx *list)
 	modulo = 20;
 	if (PALET == 4)
 		modulo = 215;
+	if (PALET == 5)
+		modulo = 30;
 	pos = (x * BPP) + (y * S_L);
 	set_it_black(pos, x, y, list);
 	if (x < LA && y < HA && x >= 0 && y >= 0)
