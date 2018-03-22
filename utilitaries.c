@@ -38,6 +38,7 @@ t_mlx	*mlx_new(void)
 
 void	fractal_generating(t_mlx *list)
 {
+	color_distributor(list);
 	if (FCT == 1)
 		lets_draw_mand(list);
 	else if (FCT == 2)

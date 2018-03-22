@@ -55,6 +55,14 @@
 # define LOCK list->julock
 # define HW list->help_w
 # define HW_PTR list->hw_ptr
+# define CLRT list->tabcolor
+
+typedef struct			s_color
+{
+	int					r;
+	int					g;
+	int					b;
+}						t_color;
 
 typedef struct			s_mlx
 {
@@ -97,6 +105,7 @@ typedef struct			s_mlx
 	int					julock;
 	int					help_w;
 	void				*hw_ptr;
+	t_color				*tabcolor;
 }						t_mlx;
 
 void					ft_fail(char *str);
@@ -106,7 +115,7 @@ void					lets_draw_mand(t_mlx *list);
 void					lets_draw_julia(t_mlx *list);
 void					lets_draw_ship(t_mlx *list);
 void					set_it_black(int pos, int x, int y, t_mlx *list);
-void					get_white(int x, int y, t_mlx *list);
+void					get_white(int x, int y, t_mlx *list, t_color color);
 void					get_colored(int x, int y, t_mlx *list);
 int						key_manager(int key, void *list);
 void					lets_scale(t_mlx *list);
@@ -125,5 +134,13 @@ void					receive_window_event(t_mlx *list);
 int						destroy_help_window(t_mlx *list);
 void					iter_upper(t_mlx *list);
 void					ft_usage(void);
+t_color					*malloc_tab(void);
+void					color_distributor(t_mlx *list);
+t_color					color_attibutor(t_color tab, int r, int g, int b);
+void					starry_sky(t_mlx *list);
+void					healthy_earthy(t_mlx *list);
+void					soft_macaroni(t_mlx *list);
+void					fifty_shades_of_fractol(t_mlx *list);
+void					fractol_online(t_mlx *list);
 
 #endif

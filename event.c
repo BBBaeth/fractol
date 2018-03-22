@@ -73,10 +73,10 @@ void	change_palet(int key, t_mlx *list)
 		PALET += 1;
 	if (key == 123)
 		PALET -= 1;
-	if (PALET > 5)
+	if (PALET > 4)
 		PALET = 0;
 	if (PALET < 0)
-		PALET = 5;
+		PALET = 4;
 	init_repeatable_var(list);
 	image_replacer(list);
 }

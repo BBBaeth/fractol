@@ -14,7 +14,7 @@
 
 void	ft_init_var3(t_mlx *list)
 {
-	PALET = 4;
+	PALET = 1;
 	DIFFY = 0;
 	DIFFX = 0;
 	JUL_X = 0.4;

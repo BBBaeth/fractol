@@ -104,6 +104,7 @@ int		main(int argc, char **argv)
 	ft_checkarg(argc, argv);
 	list = ft_init_var(argc, argv);
 	list = ft_init_var2(list);
+	CLRT = malloc_tab();
 	ft_init_var3(list);
 	help_window(list);
 	lets_scale(list);

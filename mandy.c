@@ -27,7 +27,7 @@ void	ft_iterative(t_mlx *list)
 	if (ITR == ITRMAX)
 		get_colored(X, Y, list);
 	else
-		get_white(X, Y, list);
+		get_white(X, Y, list, CLRT[ITR % 15]);
 }
 
 void	lets_draw_mand(t_mlx *list)

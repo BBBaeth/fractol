@@ -26,7 +26,7 @@ void	ft_iterative_ship(t_mlx *list)
 	if (ITR == ITRMAX)
 		get_colored(X, Y, list);
 	else
-		get_white(X, Y, list);
+		get_white(X, Y, list, CLRT[ITR % 15]);
 }
 
 void	lets_draw_ship(t_mlx *list)
