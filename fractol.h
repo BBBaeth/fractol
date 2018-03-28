@@ -56,6 +56,7 @@
 # define HW list->help_w
 # define HW_PTR list->hw_ptr
 # define CLRT list->tabcolor
+# define FLOW list->flower
 
 typedef struct			s_color
 {
@@ -106,6 +107,7 @@ typedef struct			s_mlx
 	int					help_w;
 	void				*hw_ptr;
 	t_color				*tabcolor;
+	int					flower;
 }						t_mlx;
 
 void					ft_fail(char *str);
@@ -142,5 +144,6 @@ void					healthy_earthy(t_mlx *list);
 void					soft_macaroni(t_mlx *list);
 void					fifty_shades_of_fractol(t_mlx *list);
 void					fractol_online(t_mlx *list);
+void					flower_mode(t_mlx *list);
 
 #endif

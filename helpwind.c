@@ -14,7 +14,7 @@
 
 void	generate_window(t_mlx *list)
 {
-	if (!(HW_PTR = mlx_new_window(MLX_PTR, 270, 160, "HELP WINDOW")))
+	if (!(HW_PTR = mlx_new_window(MLX_PTR, 270, 185, "HELP WINDOW")))
 		ft_fail("Error: Unable to create help window.");
 	mlx_expose_hook(HW_PTR, &window_info_display, list);
 	mlx_key_hook(HW_PTR, &key_manager, list);
@@ -40,6 +40,7 @@ int		window_info_display(t_mlx *list)
 	mlx_string_put(a, HW_PTR, 10, 85, 0xFFFFFFF, "UP/DOWN: change fractal\n");
 	mlx_string_put(a, HW_PTR, 10, 110, 0xFFFFFFF, "<- ->: change colors\n");
 	mlx_string_put(a, HW_PTR, 10, 135, 0xFFFFFFF, "I: add some details\n");
+	mlx_string_put(a, HW_PTR, 10, 160, 0xFFFFFFF, "F: flower mode on/off\n");
 	return (0);
 }
 

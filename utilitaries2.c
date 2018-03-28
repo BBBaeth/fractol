@@ -35,6 +35,16 @@ void	ft_usage(void)
 	exit(0);
 }
 
+void	flower_mode(t_mlx *list)
+{
+	if (FLOW == 0)
+		FLOW = 1;
+	else if (FLOW == 1)
+		FLOW = 0;
+	init_repeatable_var(list);
+	image_replacer(list);
+}
+
 void	iter_upper(t_mlx *list)
 {
 	if (ITRMAX < 188)

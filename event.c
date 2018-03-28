@@ -95,5 +95,7 @@ int		key_manager(int key, void *list)
 		receive_window_event(list);
 	else if (key == 34)
 		iter_upper(list);
+	else if (key == 3)
+		flower_mode(list);
 	return (0);
 }

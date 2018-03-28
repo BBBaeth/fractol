@@ -45,6 +45,7 @@ t_mlx	*ft_init_var2(t_mlx *list)
 		}
 		y++;
 	}
+	FLOW = 0;
 	return (list);
 }
 
