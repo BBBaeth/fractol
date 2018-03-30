@@ -37,9 +37,9 @@ void	ft_usage(void)
 
 void	flower_mode(t_mlx *list)
 {
-	if (FLOW == 0)
-		FLOW = 1;
-	else if (FLOW == 1)
+	if (FLOW < 2)
+		FLOW++;
+	else if (FLOW >= 2)
 		FLOW = 0;
 	init_repeatable_var(list);
 	image_replacer(list);
@@ -48,7 +48,7 @@ void	flower_mode(t_mlx *list)
 void	iter_upper(t_mlx *list)
 {
 	if (ITRMAX < 188)
-		ITRMAX += 3;
+		ITRMAX += 2;
 	else
 		ft_putstr_fd("State: iteration is already at its maximum.\n", 2);
 	init_repeatable_var(list);

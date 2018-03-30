@@ -17,7 +17,8 @@ void	ft_iterative_ship(t_mlx *list)
 	float	tmp;
 
 	while (ITR < ITRMAX && ((FLOW == 0 && ZR * ZR + ZI * ZI < 100)
-		|| (FLOW == 1 && ZR * ZI + ZI * ZR < 100)))
+		|| (FLOW == 1 && ZR * (ZI + ZI) * (ZI + ZI) * ZR < 20)
+			|| (FLOW == 2 && ZI * ZR + ZR * ZI < 40)))
 	{
 		tmp = fabsf(ZR * ZR - ZI * ZI + CR);
 		ZI = fabsf(2 * ZR * ZI + CI);
