@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   palets.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/03/30 14:24:13 by ceugene           #+#    #+#             */
+/*   Updated: 2018/03/30 14:24:22 by ceugene          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "fractol.h"
 
 void		starry_sky(t_mlx *list)
@@ -17,7 +29,6 @@ void		starry_sky(t_mlx *list)
 	CLRT[12] = color_attibutor(CLRT[12], 255, 170, 0);
 	CLRT[13] = color_attibutor(CLRT[13], 204, 128, 0);
 	CLRT[14] = color_attibutor(CLRT[14], 153, 87, 0);
-
 }
 
 void		healthy_earthy(t_mlx *list)
