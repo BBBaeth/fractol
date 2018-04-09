@@ -14,16 +14,16 @@
 
 void	ft_iterative(t_mlx *list)
 {
-	float	tmp;
+	double		tmp;
 
 	tmp = ZR;
-	while (ITR < ITRMAX && ((FLOW == 0 && ZR * ZR + ZI * ZI < 4)
+	while (ITR < ITRMAX && ((FLOW == 0 && (double)(ZR * ZR + ZI * ZI) < 4)
 		|| (FLOW == 1 && ZR * (ZI + ZI) * (ZI + ZI) * ZR < 20)
 			|| (FLOW == 2 && ZI * (ZI + ZI * ZR) + (ZI + ZI * ZR) * ZR < 4)))
 	{
 		tmp = ZR;
-		ZR = ZR * ZR - ZI * ZI + CR;
-		ZI = 2 * ZI * tmp + CI;
+		ZR = (double)(ZR * ZR) - (double)(ZI * ZI) + CR;
+		ZI = (double)(2 * ZI) * tmp + CI;
 		ITR += 1;
 	}
 	if (ITR == ITRMAX)

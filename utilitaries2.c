@@ -47,7 +47,7 @@ void	flower_mode(t_mlx *list)
 
 void	iter_upper(t_mlx *list)
 {
-	if (ITRMAX < 188)
+	if (ITRMAX < 158)
 		ITRMAX += 2;
 	else
 		ft_putstr_fd("State: iteration is already at its maximum.\n", 2);
