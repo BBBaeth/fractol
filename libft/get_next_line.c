@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 12:19:58 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/12 13:55:03 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/04/20 15:45:42 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int		ft_fill_line(char **line, char **stok, int select, int select2)
 	}
 	else if (!(*line = ft_strdup(*stok)))
 		return (-1);
-	ft_bzero(*stok, BUFF_SIZE);
+	ft_bzero(*stok, ft_strlen(*stok));
 	return (1);
 }
 
@@ -73,7 +73,7 @@ int		get_next_line(const int fd, char **line)
 			return (-1);
 		ft_strncat(stock, lu, ret);
 		ft_bzero(lu, BUFF_SIZE);
-		if (ft_memchr((ft_strlen(stock) - BUFF_SIZE) + stock, '\n', ret))
+		if (ft_memchr(stock, '\n', ft_strlen(stock)))
 			return (ft_fill_line(line, &stock, 0, 0));
 	}
 	if (ret < 0 || !(lu))
