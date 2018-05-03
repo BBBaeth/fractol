@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 12:19:58 by ceugene           #+#    #+#             */
-/*   Updated: 2018/04/20 15:45:42 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/03/12 12:38:14 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,16 +63,17 @@ int		get_next_line(const int fd, char **line)
 	char			*lu;
 	int				ret;
 
-	if ((fd != 0 && fd < 3) || BUFF_SIZE < 1 || !(lu = ft_strnew(BUFF_SIZE))
-			|| !&(*line) || !(*line = ft_strnew(BUFF_SIZE)))
+	if ((fd != 0 && fd < 3) || BUFF_SIZE < 1 || !&(*line)
+		|| !(*line = ft_strnew(BUFF_SIZE)))
 		return (-1);
-	while ((ret = read(fd, lu, BUFF_SIZE)) > 0)
+	while ((lu = ft_strnew(BUFF_SIZE))
+		&& (ret = read(fd, lu, BUFF_SIZE)) > 0)
 	{
 		lu[ret] = '\0';
 		if (!(ft_stock_up(&stock)))
 			return (-1);
 		ft_strncat(stock, lu, ret);
-		ft_bzero(lu, BUFF_SIZE);
+		free(lu);
 		if (ft_memchr(stock, '\n', ft_strlen(stock)))
 			return (ft_fill_line(line, &stock, 0, 0));
 	}

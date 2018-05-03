@@ -15,18 +15,7 @@
 int		window_closed(t_mlx *list)
 {
 	if (list != NULL)
-	{
 		mlx_destroy_window(MLX_PTR, WIN_PTR);
-		if (HW == 1)
-		{
-			ft_putstr_fd("State: properly closing help window.\n", 2);
-			mlx_destroy_window(MLX_PTR, HW_PTR);
-		}
-		if (IMG_DATA != NULL)
-			free(IMG_DATA);
-		free(list);
-		list = NULL;
-	}
 	ft_putstr_fd("State: fractol is now quitting properly.\n", 2);
 	exit(0);
 	return (0);
@@ -42,8 +31,7 @@ void	change_frct(int key, t_mlx *list)
 		FCT = 1;
 	if (FCT < 1)
 		FCT = 3;
-	if (HW == 1)
-		window_info_display(list);
+	window_info_display(list);
 	lets_scale(list);
 	mouse_wheel(1, DIFFX, DIFFY, list);
 	init_repeatable_var(list);
@@ -91,8 +79,6 @@ int		key_manager(int key, void *list)
 		change_frct(key, list);
 	else if (key == 37)
 		julia_lock(list);
-	else if (key == 40)
-		receive_window_event(list);
 	else if (key == 34)
 		iter_upper(list);
 	else if (key == 3)

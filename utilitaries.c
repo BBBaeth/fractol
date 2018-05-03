@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:29:17 by ceugene           #+#    #+#             */
-/*   Updated: 2018/04/21 16:29:27 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/03/20 11:10:31 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ t_mlx	*mlx_new(void)
 
 	if (!(new = (t_mlx *)malloc(sizeof(t_mlx) * 1)))
 		ft_fail("Error: Could not allocate memory.");
+	new->hw_ptr = NULL;
+	new->read_this = NULL;
 	return (new);
 }
 

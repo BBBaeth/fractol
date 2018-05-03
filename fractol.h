@@ -53,7 +53,6 @@
 # define MAXX list->max
 # define MAXY list->maxy
 # define LOCK list->julock
-# define HW list->help_w
 # define HW_PTR list->hw_ptr
 # define CLRT list->tabcolor
 # define FLOW list->flower
@@ -104,10 +103,9 @@ typedef struct			s_mlx
 	double				maxy;
 	double				zoom;
 	int					julock;
-	int					help_w;
 	void				*hw_ptr;
 	t_color				*tabcolor;
-	int				flower;
+	int					flower;
 }						t_mlx;
 
 void					ft_fail(char *str);
@@ -132,8 +130,6 @@ int						mouse_wheel(int button, int x, int y, t_mlx *list);
 void					help_window(t_mlx *list);
 void					ft_init_var3(t_mlx *list);
 int						window_info_display(t_mlx *list);
-void					receive_window_event(t_mlx *list);
-int						destroy_help_window(t_mlx *list);
 void					iter_upper(t_mlx *list);
 void					ft_usage(void);
 t_color					*malloc_tab(void);
