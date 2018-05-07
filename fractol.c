@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:26:20 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/12 13:39:06 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/07 11:45:00 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ t_mlx	*ft_init_var(int argc, char **argv)
 		else if (ft_strcmp("small", argv[2]) == 0)
 			SIZE = 0;
 	}
-	HA = 600 + (200 * SIZE);
-	LA = 600 + (200 * SIZE);
+	HA = 700 + (250 * SIZE);
+	LA = 700 + (250 * SIZE);
 	if (!(MLX_PTR = mlx_init()))
 		ft_fail("Error: Connection failed.");
 	if (!(WIN_PTR = mlx_new_window(MLX_PTR, LA, HA, "FRACTOL")))
