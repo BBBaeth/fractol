@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:28:28 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/13 15:02:53 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/07 14:13:50 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	lets_scale(t_mlx *list)
 {
-	ITRMAX = 30;
+	ITRMAX = 26;
 	MINX = -2.1;
 	MAXX = 0.6;
 	MINY = -1.35;
 	MAXY = 1.35;
-	if (FCT == 2)
+	if (FCT == 2 || FCT == 4)
 	{
 		MINX = -1.6;
 		MAXX = 1.6;

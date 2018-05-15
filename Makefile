@@ -13,6 +13,7 @@ SRCS = 	fractol.c			\
 		helpwind.c			\
 		colortab.c			\
 		palets.c			\
+		move.c				\
 
 SRCO = $(SRCS:.c=.o)
 

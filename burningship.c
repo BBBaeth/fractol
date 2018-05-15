@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 11:09:33 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/20 11:09:35 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/07 13:16:31 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_iterative_ship(t_mlx *list)
 	double		tmp;
 
 	while (ITR < ITRMAX && ((FLOW == 0 && ZR * ZR + ZI * ZI < 4)
-		|| (FLOW == 1 && ZR * (ZI + ZI) * (ZI + ZI) * ZR < 20)
-			|| (FLOW == 2 && ZI * ZR + ZR * ZI < 40)))
+		|| (FLOW == 1 && ZR * (ZI + ZI) * (ZI + ZI) * ZR < 4)
+			|| (FLOW == 2 && ZI * ZR + ZR * ZI < 4)))
 	{
 		tmp = fabs(ZR * ZR - ZI * ZI + CR);
 		ZI = fabs(2 * ZR * ZI + CI);

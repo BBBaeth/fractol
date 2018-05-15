@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:26:13 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/20 11:15:41 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/07 14:18:00 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ void	change_frct(int key, t_mlx *list)
 		FCT++;
 	if (key == 125)
 		FCT--;
-	if (FCT > 3)
+	if (FCT > 4)
 		FCT = 1;
 	if (FCT < 1)
-		FCT = 3;
+		FCT = 4;
 	window_info_display(list);
 	lets_scale(list);
 	mouse_wheel(1, DIFFX, DIFFY, list);
@@ -79,6 +79,8 @@ int		key_manager(int key, void *list)
 		change_frct(key, list);
 	else if (key == 37)
 		julia_lock(list);
+	else if (key == 11)
+		brain_lock(list);
 	else if (key == 34)
 		iter_upper(list);
 	else if (key == 3)

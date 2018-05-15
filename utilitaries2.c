@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 11:09:57 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/20 11:10:12 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/07 14:26:15 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_init_var3(t_mlx *list)
 	JUL_X = 0.4;
 	JUL_Y = 0.6;
 	LOCK = 0;
+	LOCK2 = 0;
 }
 
 void	ft_usage(void)
@@ -27,7 +28,7 @@ void	ft_usage(void)
 	ft_putstr_fd("Usage: fractol [fractal name] [window size]\n", 2);
 	ft_putstr_fd("\nAvailable fractals are: \n", 2);
 	ft_putstr_fd("   *  Mandelbrot  *\n   *     Julia    *\n", 2);
-	ft_putstr_fd("   *  Burningship *\n", 2);
+	ft_putstr_fd("   *  Burningship *\n   *     Brain    *\n", 2);
 	ft_putstr_fd("\nAvailable window sizes are: \n", 2);
 	ft_putstr_fd("   *      big     *\n", 2);
 	ft_putstr_fd("   *     small    *\n   *     medium   *\n", 2);

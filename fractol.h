@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:26:30 by ceugene           #+#    #+#             */
-/*   Updated: 2018/03/13 15:03:49 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/07 14:25:42 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@
 # define MAXX list->max
 # define MAXY list->maxy
 # define LOCK list->julock
+# define LOCK2 list->brlock
 # define HW_PTR list->hw_ptr
 # define CLRT list->tabcolor
 # define FLOW list->flower
@@ -103,6 +104,7 @@ typedef struct			s_mlx
 	double				maxy;
 	double				zoom;
 	int					julock;
+	int					brlock;
 	void				*hw_ptr;
 	t_color				*tabcolor;
 	int					flower;
@@ -114,6 +116,7 @@ int						window_closed(t_mlx *list);
 void					lets_draw_mand(t_mlx *list);
 void					lets_draw_julia(t_mlx *list);
 void					lets_draw_ship(t_mlx *list);
+void					lets_draw_bobby(t_mlx *list);
 void					set_it_black(int pos, int x, int y, t_mlx *list);
 void					get_white(int x, int y, t_mlx *list, t_color color);
 void					get_colored(int x, int y, t_mlx *list);
@@ -141,5 +144,8 @@ void					soft_macaroni(t_mlx *list);
 void					fifty_shades_of_fractol(t_mlx *list);
 void					fractol_online(t_mlx *list);
 void					flower_mode(t_mlx *list);
+void					move_side(int key, t_mlx *list);
+int						key_pressed(int key, t_mlx *list);
+void					brain_lock(t_mlx *list);
 
 #endif
