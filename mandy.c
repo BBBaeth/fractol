@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:28:22 by ceugene           #+#    #+#             */
-/*   Updated: 2018/05/07 14:23:42 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/15 14:57:18 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,12 @@ void	ft_iterative(t_mlx *list)
 		get_white(X, Y, list, CLRT[ITR % 15]);
 }
 
-void	ft_iterative_bobby(t_mlx *list)
+void	ft_iterative_2(t_mlx *list)
 {
 	double		tmp;
 
 	tmp = ZR;
-	while (ITR < ITRMAX && (double)(ZR * ZI * ZI) < 10)
+	while (ITR < ITRMAX && (double)(ZR * ZI * ZI) < 4)
 	{
 		tmp = ZR;
 		ZR = (double)(ZI * ZI) - (double)(ZR * ZR) + CR;
@@ -88,7 +88,7 @@ void	lets_draw_julia(t_mlx *list)
 	}
 }
 
-void	lets_draw_bobby(t_mlx *list)
+void	lets_draw_brain(t_mlx *list)
 {
 	while (X <= LA)
 	{
@@ -101,8 +101,8 @@ void	lets_draw_bobby(t_mlx *list)
 		ZR = X / ZOOM_X + MINX;
 		ZI = Y / ZOOM_Y + MINY;
 		ITR = 0;
-		CR = JUL_X;
-		CI = JUL_Y;
-		ft_iterative_bobby(list);
+		CR = -0.259368;
+		CI = 0;
+		ft_iterative_2(list);
 	}
 }

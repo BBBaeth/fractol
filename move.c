@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/07 12:36:30 by ceugene           #+#    #+#             */
-/*   Updated: 2018/05/07 14:25:59 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/15 14:00:56 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,21 +61,4 @@ int		key_pressed(int key, t_mlx *list)
 	else if (key == 1 || key == 13)
 		move_height(key, list);
 	return (0);
-}
-
-void	brain_lock(t_mlx *list)
-{
-	if (FCT == 4)
-	{
-		if (LOCK2 == 1)
-		{
-			ft_putstr_fd("State: Mouse motion enabled for Brain.\n", 2);
-			LOCK2 = 0;
-		}
-		else if (LOCK2 == 0)
-		{
-			ft_putstr_fd("State: Mouse motion disabled for Brain.\n", 2);
-			LOCK2 = 1;
-		}
-	}
 }

@@ -6,11 +6,19 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:28:28 by ceugene           #+#    #+#             */
-/*   Updated: 2018/05/07 14:13:50 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/15 14:57:24 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+void	lets_scale_2(t_mlx *list)
+{
+	MINX = -0.5;
+	MAXX = 0.5;
+	MINY = -1;
+	MAXY = 0;
+}
 
 void	lets_scale(t_mlx *list)
 {
@@ -19,13 +27,15 @@ void	lets_scale(t_mlx *list)
 	MAXX = 0.6;
 	MINY = -1.35;
 	MAXY = 1.35;
-	if (FCT == 2 || FCT == 4)
+	if (FCT == 2 || FCT == 4 || FCT == 6 || FCT == 7)
 	{
 		MINX = -1.6;
 		MAXX = 1.6;
 		MINY = -1.6;
 		MAXY = 1.6;
 	}
+	if (FCT == 5)
+		lets_scale_2(list);
 	if (FCT == 3)
 	{
 		MINX = -2.0;

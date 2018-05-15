@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:29:17 by ceugene           #+#    #+#             */
-/*   Updated: 2018/05/07 14:26:05 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/15 14:57:13 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,13 @@ void	fractal_generating(t_mlx *list)
 	else if (FCT == 3)
 		lets_draw_ship(list);
 	else if (FCT == 4)
-		lets_draw_bobby(list);
-	else if (FCT > 4 || FCT < 1)
+		lets_draw_brain(list);
+	else if (FCT == 5)
+		lets_draw_hiroshima(list);
+	else if (FCT == 6)
+		lets_draw_paque(list);
+	else if (FCT == 7)
+		lets_draw_lizard(list);
+	else
 		ft_fail("Error: Unable to generate this fractal at the moment.");
 }

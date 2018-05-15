@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 11:09:45 by ceugene           #+#    #+#             */
-/*   Updated: 2018/05/07 14:12:04 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/15 15:01:45 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,8 @@ void	generate_window(t_mlx *list)
 	mlx_hook(HW_PTR, 17, 1L << 17, &window_closed, list);
 }
 
-int		window_info_display(t_mlx *list)
+void	fractal_name_display(t_mlx *list)
 {
-	void	*a;
-
 	if (FCT == 2)
 		NAME = ft_strdup("  Julia");
 	else if (FCT == 1)
@@ -33,6 +31,19 @@ int		window_info_display(t_mlx *list)
 		NAME = ft_strdup("Burning ship");
 	else if (FCT == 4)
 		NAME = ft_strdup("   Brain");
+	else if (FCT == 5)
+		NAME = ft_strdup("Hiroshima");
+	else if (FCT == 6)
+		NAME = ft_strdup("Paquerette");
+	else if (FCT == 7)
+		NAME = ft_strdup("   Ripped");
+}
+
+int		window_info_display(t_mlx *list)
+{
+	void	*a;
+
+	fractal_name_display(list);
 	a = MLX_PTR;
 	mlx_clear_window(MLX_PTR, HW_PTR);
 	mlx_string_put(a, HW_PTR, 80, 7, 0xFFFFFFF, NAME);

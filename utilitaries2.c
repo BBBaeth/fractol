@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 11:09:57 by ceugene           #+#    #+#             */
-/*   Updated: 2018/05/07 14:26:15 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/15 15:00:39 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	ft_init_var3(t_mlx *list)
 	JUL_X = 0.4;
 	JUL_Y = 0.6;
 	LOCK = 0;
-	LOCK2 = 0;
 }
 
 void	ft_usage(void)
@@ -29,6 +28,8 @@ void	ft_usage(void)
 	ft_putstr_fd("\nAvailable fractals are: \n", 2);
 	ft_putstr_fd("   *  Mandelbrot  *\n   *     Julia    *\n", 2);
 	ft_putstr_fd("   *  Burningship *\n   *     Brain    *\n", 2);
+	ft_putstr_fd("   *   Hiroshima  *\n   *  Paquerette  *\n", 2);
+	ft_putstr_fd("   *    Ripped    *\n", 2);
 	ft_putstr_fd("\nAvailable window sizes are: \n", 2);
 	ft_putstr_fd("   *      big     *\n", 2);
 	ft_putstr_fd("   *     small    *\n   *     medium   *\n", 2);
@@ -47,8 +48,8 @@ void	flower_mode(t_mlx *list)
 
 void	iter_upper(t_mlx *list)
 {
-	if (ITRMAX < 158)
-		ITRMAX += 2;
+	if (ITRMAX < 148)
+		ITRMAX += 1;
 	else
 		ft_putstr_fd("State: iteration is already at its maximum.\n", 2);
 	init_repeatable_var(list);

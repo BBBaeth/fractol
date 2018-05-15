@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:26:20 by ceugene           #+#    #+#             */
-/*   Updated: 2018/05/07 14:25:15 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/15 14:59:21 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,8 @@ t_mlx	*ft_init_var(int argc, char **argv)
 	t_mlx	*list;
 
 	list = mlx_new();
-	FCT = 4;
-	if (ft_strcmp(argv[1], "mandelbrot") == 0)
-		FCT = 1;
-	else if (ft_strcmp(argv[1], "julia") == 0)
-		FCT = 2;
-	else if (ft_strcmp(argv[1], "burningship") == 0)
-		FCT = 3;
 	SIZE = 1;
+	fractal_name_redirect(argv, list);
 	if (argc >= 3)
 	{
 		if (ft_strcmp("big", argv[2]) == 0)
@@ -96,7 +90,9 @@ void	ft_checkarg(int argc, char **argv)
 	}
 	if (argc < 2 || argv[1][0] == '\0' || (ft_strcmp(argv[1], "mandelbrot")
 		&& ft_strcmp(argv[1], "julia") && ft_strcmp(argv[1], "burningship")
-			&& ft_strcmp(argv[1], "brain")))
+			&& ft_strcmp(argv[1], "brain") && ft_strcmp(argv[1], "hiroshima")
+				&& ft_strcmp(argv[1], "paquerette")
+					&& ft_strcmp(argv[1], "ripped")))
 		ft_usage();
 }
 

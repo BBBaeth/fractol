@@ -6,7 +6,7 @@
 /*   By: ceugene <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/12 13:28:37 by ceugene           #+#    #+#             */
-/*   Updated: 2018/05/07 14:27:59 by ceugene          ###   ########.fr       */
+/*   Updated: 2018/05/15 14:31:57 by ceugene          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int		mouse_wheel(int button, int x, int y, t_mlx *list)
 		image_replacer(list);
 		return (0);
 	}
-	else if ((FCT == 2 && LOCK == 0) || (FCT == 4 && LOCK2 == 0))
+	else if (FCT == 2 && LOCK == 0)
 		mlx_hook(WIN_PTR, 6, 1L << 6, mouse_move, list);
 	return (1);
 }
