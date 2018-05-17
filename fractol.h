@@ -118,6 +118,7 @@ void					lets_draw_brain(t_mlx *list);
 void					lets_draw_hiroshima(t_mlx *list);
 void					lets_draw_paque(t_mlx *list);
 void					lets_draw_lizard(t_mlx *list);
+void					lets_draw_snake(t_mlx *list);
 void					set_it_black(int pos, int x, int y, t_mlx *list);
 void					get_white(int x, int y, t_mlx *list, t_color color);
 void					get_colored(int x, int y, t_mlx *list);

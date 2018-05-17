@@ -56,6 +56,8 @@ void	fractal_generating(t_mlx *list)
 		lets_draw_paque(list);
 	else if (FCT == 7)
 		lets_draw_lizard(list);
+	else if (FCT == 8)
+		lets_draw_snake(list);
 	else
 		ft_fail("Error: Unable to generate this fractal at the moment.");
 }

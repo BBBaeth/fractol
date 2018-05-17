@@ -34,9 +34,11 @@ void	fractal_name_display(t_mlx *list)
 	else if (FCT == 5)
 		NAME = ft_strdup("Hiroshima");
 	else if (FCT == 6)
-		NAME = ft_strdup("Paquerette");
+		NAME = ft_strdup(" Brocoli");
 	else if (FCT == 7)
-		NAME = ft_strdup("   Ripped");
+		NAME = ft_strdup("  Ripped");
+	else if (FCT == 8)
+		NAME = ft_strdup("  Snake");
 }
 
 int		window_info_display(t_mlx *list)

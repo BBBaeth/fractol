@@ -37,7 +37,7 @@ void	ft_dezoom(int x, int y, t_mlx *list)
 	ZOOM_X = ZOOM_X / 1.2;
 	MAXX = (MINX + LA / ZOOM_X);
 	MAXY = (MINY + HA / ZOOM_Y);
-	ITRMAX -= 2;
+	ITRMAX -= 1;
 }
 
 void	ft_zoom(int x, int y, t_mlx *list)
@@ -50,7 +50,7 @@ void	ft_zoom(int x, int y, t_mlx *list)
 	ZOOM_Y = ZOOM_Y * 1.2;
 	MAXX = (MINX + LA / ZOOM_X);
 	MAXY = (MINY + HA / ZOOM_Y);
-	ITRMAX += 2;
+	ITRMAX += 1;
 }
 
 int		mouse_wheel(int button, int x, int y, t_mlx *list)

@@ -91,8 +91,9 @@ void	ft_checkarg(int argc, char **argv)
 	if (argc < 2 || argv[1][0] == '\0' || (ft_strcmp(argv[1], "mandelbrot")
 		&& ft_strcmp(argv[1], "julia") && ft_strcmp(argv[1], "burningship")
 			&& ft_strcmp(argv[1], "brain") && ft_strcmp(argv[1], "hiroshima")
-				&& ft_strcmp(argv[1], "paquerette")
-					&& ft_strcmp(argv[1], "ripped")))
+				&& ft_strcmp(argv[1], "brocoli")
+					&& ft_strcmp(argv[1], "ripped")
+						&& ft_strcmp(argv[1], "snake")))
 		ft_usage();
 }
 

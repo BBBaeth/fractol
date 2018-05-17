@@ -28,8 +28,8 @@ void	ft_usage(void)
 	ft_putstr_fd("\nAvailable fractals are: \n", 2);
 	ft_putstr_fd("   *  Mandelbrot  *\n   *     Julia    *\n", 2);
 	ft_putstr_fd("   *  Burningship *\n   *     Brain    *\n", 2);
-	ft_putstr_fd("   *   Hiroshima  *\n   *  Paquerette  *\n", 2);
-	ft_putstr_fd("   *    Ripped    *\n", 2);
+	ft_putstr_fd("   *   Hiroshima  *\n   *    Brocoli   *\n", 2);
+	ft_putstr_fd("   *    Ripped    *\n   *     Snake    *\n", 2);
 	ft_putstr_fd("\nAvailable window sizes are: \n", 2);
 	ft_putstr_fd("   *      big     *\n", 2);
 	ft_putstr_fd("   *     small    *\n   *     medium   *\n", 2);

@@ -101,7 +101,7 @@ void	lets_draw_brain(t_mlx *list)
 		ZR = X / ZOOM_X + MINX;
 		ZI = Y / ZOOM_Y + MINY;
 		ITR = 0;
-		CR = -0.259368;
+		CR = -0.2459368;
 		CI = 0;
 		ft_iterative_2(list);
 	}

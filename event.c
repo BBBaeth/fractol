@@ -27,10 +27,10 @@ void	change_frct(int key, t_mlx *list)
 		FCT++;
 	if (key == 125)
 		FCT--;
-	if (FCT > 7)
+	if (FCT > 8)
 		FCT = 1;
 	if (FCT < 1)
-		FCT = 7;
+		FCT = 8;
 	window_info_display(list);
 	lets_scale(list);
 	mouse_wheel(1, DIFFX, DIFFY, list);

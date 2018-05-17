@@ -24,10 +24,12 @@ void	fractal_name_redirect(char **argv, t_mlx *list)
 		FCT = 4;
 	else if (ft_strcmp(argv[1], "hiroshima") == 0)
 		FCT = 5;
-	else if (ft_strcmp(argv[1], "paquerette") == 0)
+	else if (ft_strcmp(argv[1], "brocoli") == 0)
 		FCT = 6;
 	else if (ft_strcmp(argv[1], "ripped") == 0)
 		FCT = 7;
+	else if (ft_strcmp(argv[1], "snake") == 0)
+		FCT = 8;
 }
 
 void	lets_draw_lizard(t_mlx *list)
@@ -62,8 +64,8 @@ void	lets_draw_paque(t_mlx *list)
 		ZR = X / ZOOM_X + MINX;
 		ZI = Y / ZOOM_Y + MINY;
 		ITR = 0;
-		CR = -0.303158;
-		CI = 0.316632;
+		CR = -0.3;
+		CI = 0.3;
 		ft_iterative_2(list);
 	}
 }
@@ -86,3 +88,23 @@ void	lets_draw_hiroshima(t_mlx *list)
 		ft_iterative_2(list);
 	}
 }
+
+void	lets_draw_snake(t_mlx *list)
+{
+	while (X <= LA)
+	{
+		Y += 1;
+		if (Y > LA)
+		{
+			X += 1;
+			Y = 0;
+		}
+		ZR = X / ZOOM_X + MINX;
+		ZI = Y / ZOOM_Y + MINY;
+		ITR = 0;
+		CR = -0.080842;
+		CI = -0.4;
+		ft_iterative_2(list);
+	}
+}
+

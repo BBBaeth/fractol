@@ -22,17 +22,17 @@ void	lets_scale_2(t_mlx *list)
 
 void	lets_scale(t_mlx *list)
 {
-	ITRMAX = 26;
+	ITRMAX = 29;
 	MINX = -2.1;
 	MAXX = 0.6;
 	MINY = -1.35;
 	MAXY = 1.35;
-	if (FCT == 2 || FCT == 4 || FCT == 6 || FCT == 7)
+	if (FCT == 2 || FCT == 4 || FCT == 6 || FCT >= 7)
 	{
 		MINX = -1.6;
 		MAXX = 1.6;
-		MINY = -1.6;
-		MAXY = 1.6;
+		MINY = -1.5;
+		MAXY = 1.5;
 	}
 	if (FCT == 5)
 		lets_scale_2(list);
