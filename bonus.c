@@ -45,8 +45,8 @@ void	lets_draw_lizard(t_mlx *list)
 		ZR = X / ZOOM_X + MINX;
 		ZI = Y / ZOOM_Y + MINY;
 		ITR = 0;
-		CR = -0.040421;
-		CI = 0.276211;
+		CR = -0.05;
+		CI = 0.3;
 		ft_iterative_2(list);
 	}
 }
@@ -102,7 +102,7 @@ void	lets_draw_snake(t_mlx *list)
 		ZR = X / ZOOM_X + MINX;
 		ZI = Y / ZOOM_Y + MINY;
 		ITR = 0;
-		CR = -0.080842;
+		CR = -0.08;
 		CI = -0.4;
 		ft_iterative_2(list);
 	}

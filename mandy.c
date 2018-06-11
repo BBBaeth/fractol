@@ -37,7 +37,7 @@ void	ft_iterative_2(t_mlx *list)
 	double		tmp;
 
 	tmp = ZR;
-	while (ITR < ITRMAX && (double)(ZR * ZI * ZI) < 4)
+	while (ITR < ITRMAX && (double)(ZR * ZR + ZI * ZI) < 4)
 	{
 		tmp = ZR;
 		ZR = (double)(ZI * ZI) - (double)(ZR * ZR) + CR;
